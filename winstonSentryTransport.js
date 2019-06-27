@@ -13,7 +13,7 @@ module.exports = class SentryTransport extends Transport {
     let initSettings = { dsn: settings.dsn };
     if (!!settings.options) {
       for (var property in settings.options) {
-        if (settings.hasOwnProperty(property)) {
+        if (settings.options.hasOwnProperty(property)) {
           initSettings[property] = settings.options[property];
         }
       }
